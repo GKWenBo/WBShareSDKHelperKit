@@ -1,0 +1,6 @@
+framework module WBShareSDKHelperKit {
+  umbrella header "WBShareSDKHelperKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

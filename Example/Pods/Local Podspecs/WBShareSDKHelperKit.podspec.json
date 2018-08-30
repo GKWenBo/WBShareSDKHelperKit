@@ -1,0 +1,41 @@
+{
+  "name": "WBShareSDKHelperKit",
+  "version": "1.0.0",
+  "summary": "三方分享封装",
+  "homepage": "https://gitee.com/wenmobo/WBShareSDKHelperKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wenmobo": "1050794513@qq.com"
+  },
+  "source": {
+    "git": "https://gitee.com/wenmobo/WBShareSDKHelperKit.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WBShareSDKHelperKit/Classes/**/*",
+  "dependencies": {
+    "mob_sharesdk": [
+
+    ],
+    "mob_sharesdk/ShareSDKUI": [
+
+    ],
+    "mob_sharesdk/ShareSDKPlatforms/QQ": [
+
+    ],
+    "mob_sharesdk/ShareSDKPlatforms/SinaWeibo": [
+
+    ],
+    "mob_sharesdk/ShareSDKPlatforms/WeChat": [
+
+    ],
+    "mob_sharesdk/ShareSDKExtension": [
+
+    ]
+  }
+}
