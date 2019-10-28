@@ -1,10 +1,10 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/MOBFoundation" "${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK" "${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Required" "${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Optional" "${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/QQSDK" "${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/PlatformConnector"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/MOBFoundation/MOBFoundation" "${PODS_ROOT}/mob_sharesdk/ShareSDK" "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/Optional" "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformConnector" "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/QQSDK" "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/Required"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MOBFoundation" "${PODS_ROOT}/Headers/Public/WBShareSDKHelperKit" "${PODS_ROOT}/Headers/Public/mob_sharesdk"
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/WBShareSDKHelperKit" "${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK" "${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/WeChatSDK"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/MOBFoundation" -isystem "${PODS_ROOT}/Headers/Public/WBShareSDKHelperKit" -isystem "${PODS_ROOT}/Headers/Public/mob_sharesdk"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"WBShareSDKHelperKit" -l"WeChatSDK" -l"WeiboSDK" -l"sqlite3" -l"stdc++" -l"z" -framework "ImageIO" -framework "JavaScriptCore" -framework "MOBFoundation" -framework "MOBFoundationEx" -framework "QQConnector" -framework "ShareSDK" -framework "ShareSDKConnector" -framework "ShareSDKExtension" -framework "ShareSDKUI" -framework "SinaWeiboConnector" -framework "TencentOpenAPI" -framework "WechatConnector"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/WBShareSDKHelperKit" "${PODS_ROOT}/Headers/Public/mob_sharesdk"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/WBShareSDKHelperKit" "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/SinaWeiboSDK" "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/WeChatSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"WBShareSDKHelperKit" -l"WeChatSDK" -l"WeiboSDK" -l"c++" -l"sqlite3" -l"z" -framework "ImageIO" -framework "JavaScriptCore" -framework "MOBFoundation" -framework "MOBFoundationEx" -framework "QQConnector" -framework "ShareSDK" -framework "ShareSDKConnector" -framework "ShareSDKExtension" -framework "ShareSDKUI" -framework "SinaWeiboConnector" -framework "TencentOpenAPI" -framework "UIKit" -framework "WechatConnector"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

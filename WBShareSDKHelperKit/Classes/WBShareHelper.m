@@ -16,48 +16,20 @@
     if (!config) {
         return NO;
     }
-    [ShareSDK registerActivePlatforms:config.platforms
-                             onImport:^(SSDKPlatformType platformType)
-     {
-         switch (platformType)
-         {
-             case SSDKPlatformTypeWechat:
-                 [ShareSDKConnector connectWeChat:[WXApi class]];
-                 break;
-             case SSDKPlatformTypeQQ:
-                 [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
-                 break;
-             case SSDKPlatformTypeSinaWeibo:
-                 [ShareSDKConnector connectWeibo:[WeiboSDK class]];
-                 break;
-             default:
-                 break;
-         }
-     }
-                      onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
-     {
-         switch (platformType)
-         {
-             case SSDKPlatformTypeSinaWeibo:
-                 //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
-                 [appInfo SSDKSetupSinaWeiboByAppKey:config.SinaSDKAppKey
-                                           appSecret:config.SinaSDKAppSecret
-                                         redirectUri:config.SinaSDKRedirectURL
-                                            authType:SSDKAuthTypeBoth];
-                 break;
-             case SSDKPlatformTypeWechat:
-                 [appInfo SSDKSetupWeChatByAppId:config.WeChatSDKAppId
-                                       appSecret:config.WeChatSDKAppSecret];
-                 break;
-             case SSDKPlatformTypeQQ:
-                 [appInfo SSDKSetupQQByAppId:config.QQSDKAppId
-                                      appKey:config.QQSDKAppKey
-                                    authType:SSDKAuthTypeBoth];
-                 break;
-             default:
-                 break;
-         }
-     }];
+    
+    [ShareSDK registPlatforms:^(SSDKRegister *platformsRegister) {
+        //QQ
+        [platformsRegister setupQQWithAppId:config.qqSDKAppId
+                                     appkey:config.qqSDKAppKey];
+        //微信
+        [platformsRegister setupWeChatWithAppId:config.wechatSDKAppId
+                                      appSecret:config.wechatSDKAppSecret
+                                  universalLink:config.wechatUniversalLink];
+        //新浪
+        [platformsRegister setupSinaWeiboWithAppkey:config.sinaSDKAppKey
+                                          appSecret:config.sinaSDKAppSecret
+                                        redirectUrl:config.sinaSDKRedirectURL];
+    }];
     return YES;
 }
 

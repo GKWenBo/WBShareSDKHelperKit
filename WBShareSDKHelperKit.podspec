@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'WBShareSDKHelperKit'
-  s.version          = '1.0.1'
-  s.summary          = '三方分享封装'
+  s.version          = '1.1.0'
+  s.summary          = 'QQ、微信、新浪三方分享封装'
   s.homepage         = 'https://github.com/wenmobo/WBShareSDKHelperKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wenmobo' => '1050794513@qq.com' }
@@ -9,11 +9,11 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.source_files = 'WBShareSDKHelperKit/Classes/**/*'
   s.requires_arc = true
-  s.dependency 'mob_sharesdk'
-  s.dependency 'mob_sharesdk/ShareSDKUI'
-  s.dependency 'mob_sharesdk/ShareSDKPlatforms/QQ'
-  s.dependency 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
-  s.dependency 'mob_sharesdk/ShareSDKPlatforms/WeChat'
-  s.dependency 'mob_sharesdk/ShareSDKExtension'
+  s.dependency 'mob_sharesdk', '>= 4.3.3'
+  s.dependency 'mob_sharesdk/ShareSDKUI', '>= 4.3.3'
+  s.dependency 'mob_sharesdk/ShareSDKPlatforms/QQ', '>= 4.3.3'
+  s.dependency 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo', '>= 4.3.3'
+  s.dependency 'mob_sharesdk/ShareSDKPlatforms/WeChat', '>= 4.3.3'
+  s.dependency 'mob_sharesdk/ShareSDKExtension', '>= 4.3.3'
   s.frameworks = 'UIKit'
 end

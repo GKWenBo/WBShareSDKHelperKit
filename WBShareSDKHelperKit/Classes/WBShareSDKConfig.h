@@ -17,15 +17,17 @@
  */
 @property (nonatomic, strong) NSArray *platforms;
 
-@property (nonatomic, copy) NSString *WeChatSDKAppId;
-@property (nonatomic, copy) NSString *WeChatSDKAppSecret;
-@property (nonatomic, copy) NSString *WeChatSDKRedirectURL;
+@property (nonatomic, copy) NSString *wechatSDKAppId;
+@property (nonatomic, copy) NSString *wechatSDKAppSecret;
+@property (nonatomic, copy) NSString *wechatSDKRedirectURL;
+///微信深度链接
+@property (nonatomic, copy) NSString *wechatUniversalLink;
 
-@property (nonatomic, copy) NSString *QQSDKAppId;
-@property (nonatomic, copy) NSString *QQSDKAppKey;
+@property (nonatomic, copy) NSString *qqSDKAppId;
+@property (nonatomic, copy) NSString *qqSDKAppKey;
 
-@property (nonatomic, copy) NSString *SinaSDKAppKey;
-@property (nonatomic, copy) NSString *SinaSDKAppSecret;
-@property (nonatomic, copy) NSString *SinaSDKRedirectURL;
+@property (nonatomic, copy) NSString *sinaSDKAppKey;
+@property (nonatomic, copy) NSString *sinaSDKAppSecret;
+@property (nonatomic, copy) NSString *sinaSDKRedirectURL;
 
 @end
